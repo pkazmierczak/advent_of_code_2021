@@ -3,3 +3,4 @@
 day01b/advent_of_code
 *.o
 *.hi
+venv/

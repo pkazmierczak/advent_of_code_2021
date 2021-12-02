@@ -21,5 +21,5 @@ func readLines(path string) []int {
 }
 
 func main() {
-	fmt.Println(day01(readLines("day01.txt")))
+	fmt.Println(day01(readLines("../day01.txt")))
 }
