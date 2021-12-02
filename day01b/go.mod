@@ -1,3 +1,3 @@
-module github.com/pkazmierczak/advent_of_code_2021
+module advent_of_code
 
 go 1.17
