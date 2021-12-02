@@ -3,13 +3,17 @@
 import Data.Text (pack, splitOn, unpack)
 import System.IO
 
+-- |condSum will return a sum of all second elements of a list of tuples given
+-- the first tuple element matches the string
+condSum :: (Num a1, Eq a2) => a2 -> [(a2, a1)] -> a1
+condSum string tuples =
+    sum $ map snd $ filter (\x -> fst x == string) tuples
+
 computeCoordinates :: [(String, Int)] -> (Int, Int)
 computeCoordinates lineTuples = (x, y)
   where
-    x = sum $ map snd $ filter (\x -> fst x == "forward") lineTuples
-    y =
-      sum (map snd $ filter (\x -> fst x == "down") lineTuples)
-        - sum (map snd $ filter (\x -> fst x == "up") lineTuples)
+    x = condSum "forward" lineTuples
+    y = condSum "down" lineTuples - condSum "up" lineTuples
 
 main :: IO ()
 main = do
