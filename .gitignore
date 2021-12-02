@@ -1,3 +1,5 @@
 /day01a/target
 .DS_Store
 day01b/advent_of_code
+*.o
+*.hi
