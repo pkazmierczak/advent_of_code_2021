@@ -1,6 +1,3 @@
-from pprint import pprint
-
-
 def parse_input(lines):
     """
     Parses the input and returns an array of draws and an array of boards.
